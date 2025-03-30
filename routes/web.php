@@ -2,15 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProyectoController;
-use App\Models\Proyectos;
+
 
 Route::get('/', [ProyectoController::class, 'index'])->name('proyectos.index');
 //segundo paso de crear un nuevo proyecto es poner la ruta
 
 Route::controller(ProyectoController::class)->group(function(){ 
 Route::get('proyectos/crear','create')->name('proyectos.crear');
-
-
 });
 
 
